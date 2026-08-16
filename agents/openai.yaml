@@ -1,0 +1,7 @@
+interface:
+  display_name: "APP_CHECKER"
+  short_description: "Evidence-led QA for apps, games, and websites"
+  default_prompt: "Use $app-checker to test this app, reproduce important failures, and produce an evidence-backed QA report."
+
+policy:
+  allow_implicit_invocation: true
