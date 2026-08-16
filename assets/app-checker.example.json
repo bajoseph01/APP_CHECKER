@@ -1,0 +1,61 @@
+{
+  "name": "Example App",
+  "appType": "web-app",
+  "audience": "General users",
+  "baseDirectory": ".",
+  "startCommand": "npm run dev",
+  "url": "http://localhost:5173",
+  "healthcheck": "/",
+  "criticalJourneys": [
+    "open the app and reach the main screen",
+    "complete the primary task",
+    "recover from an invalid action",
+    "refresh and retain expected state"
+  ],
+  "criticalControls": [
+    "primary action",
+    "navigation",
+    "restart or reset"
+  ],
+  "supportedInputs": [
+    "pointer",
+    "keyboard",
+    "touch"
+  ],
+  "viewports": [
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "name": "tablet-portrait",
+      "width": 820,
+      "height": 1180,
+      "touch": true
+    },
+    {
+      "name": "phone",
+      "width": 390,
+      "height": 844,
+      "touch": true
+    }
+  ],
+  "testCommands": {
+    "build": "npm run build",
+    "unit": "npm test",
+    "e2e": "npm run test:e2e"
+  },
+  "dataSafety": {
+    "environment": "local",
+    "reset": "Use the application's documented reset flow",
+    "prohibited": [
+      "Do not mutate production data",
+      "Do not send real messages or payments"
+    ]
+  },
+  "appSpecificAssertions": [
+    "The primary task shows an unambiguous success state"
+  ],
+  "excludedSurfaces": []
+}
